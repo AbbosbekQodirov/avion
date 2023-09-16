@@ -44,7 +44,7 @@ main {
     display: flex;
     justify-content: center;
     gap: 30px;
-    padding: 18px 0px;
+    padding: 14px 0px;
 }
 
 .links a {
@@ -54,7 +54,7 @@ main {
 }
 .links li{
     position: relative;
-    padding: 6px 4px;
+    padding: 8px 4px;
 }
 .links li::after{
     position: absolute;
@@ -68,6 +68,21 @@ main {
 }
 .links li:hover::after{
 width: 100%;
+}
+
+.links li::before {
+    position: absolute;
+    content: "";
+    top: 0px;
+    right: 0px;
+    width: 0%;
+    height: 2px;
+    background-color: #2A254B;
+    transition: all .5s ease;
+}
+
+.links li:hover::before {
+    width: 100%;
 }
 .links li:hover a{
     color: #2A254B;
@@ -144,6 +159,7 @@ section {
     border: 2px solid #4E4D93;
     border-radius: 20px;
     box-shadow: 0px 0px 10px 2px #4E4D93;
+    transform: translateY(-10px);
 }
 
 .services div h3 {
@@ -174,10 +190,21 @@ section {
     margin: 30px 0px;
     font-weight: 100;
 }
+.ceramics div{
+    border: 2px solid rgba(255, 0, 0, 0);
+    transition: all .3s ease;
+    overflow: hidden;
+}
+.ceramics div:hover{
+   border: 2px solid #4E4D93;
+   transform: translateY(-10px);
+   border-radius: 10px;
+}
 
 .ceramics div h3 {
     margin: 10px 0px;
     font-weight: 100;
+    margin-left: 10px;
 }
 
 .ceramics_container button {
